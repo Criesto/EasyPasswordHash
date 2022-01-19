@@ -23,11 +23,12 @@ class DashboardController extends AbstractDashboardController
     {
         return Dashboard::new()
             ->setTitle('EasyPasswordHash');
+
     }
 
     public function configureMenuItems(): iterable
     {
-        yield MenuItem::linkToDashboard('Dashboard', 'fa fa-home');
+        //yield MenuItem::linkToDashboard('Panel administracyjny', 'fa fa-home');
         yield MenuItem::section('Users', 'fas fa-user');
         yield MenuItem::linkToCrud('Users', 'fas fa-list', User::class);
     }
